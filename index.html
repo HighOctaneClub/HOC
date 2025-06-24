@@ -5,114 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="GRdzuqnkM-gXkyWhtm8xRAr4CUt3KpwlK3NAm8rmTic" />
     <meta name="keywords" content="High Octane Club, school auto club, car events, racing club,dps,dps dwarka, automobile club, dpsc lub, student motorsports">
-    <title>HIGH OCTANE CLUB </title>
+    <title>HIGH OCTANE CLUB</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap">
     <style>
-        /* MEMBERS SECTION STYLES */
-.member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
 
-.member-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform-style: preserve-3d;
-}
-
-.member-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.7) 80%);
-    z-index: 1;
-}
-
-.member-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.member-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 25px;
-    z-index: 2;
-    transform: translateY(0);
-    transition: all 0.4s ease;
-}
-
-.member-social {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-    z-index: 3;
-}
-
-.member-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.member-social a:hover {
-    background: var(--primary);
-    transform: scale(1.1);
-}
-
-.member-card:hover {
-    box-shadow: 0 25px 50px -12px rgba(255, 0, 0, 0.25);
-    transform: translateY(-10px);
-}
-
-.member-card:hover .member-img {
-    transform: scale(1.05);
-}
-
-.member-card:hover .member-info {
-    transform: translateY(-10px);
-}
-
-.member-card:hover .member-social {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.member-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--primary);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 3;
-}
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
         :root {
             --primary: #FF0000;
@@ -143,17 +49,16 @@
         }
 
         .glow-text {
-            text-shadow: 0 0 8px rgba(255, 0, 0, 0.7), 
-                         0 0 15px rgba(255, 0, 0, 0.5),
-                         0 0 30px rgba(255, 0, 0, 0.3);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8),
+                         0 0 20px rgba(255, 51, 51, 0.6),
+                         0 0 40px rgba(255, 102, 102, 0.4);
         }
 
         .glow-box {
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
-                        0 0 20px rgba(255, 51, 51, 0.2);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4),
+                        0 0 30px rgba(255, 51, 51, 0.2);
         }
 
-        /* Scroll animations */
         [data-animate] {
             opacity: 0;
             transform: translateY(30px);
@@ -165,7 +70,6 @@
             transform: translateY(0);
         }
 
-        /* Road lines animation */
         @keyframes roadLine {
             0% { background-position: 0 0; }
             100% { background-position: 0 40px; }
@@ -177,7 +81,6 @@
             animation: roadLine 0.7s linear infinite;
         }
 
-        /* Pulse effect for CTA */
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
@@ -188,7 +91,6 @@
             animation: pulse 2s infinite;
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -202,10 +104,10 @@
             border-radius: 4px;
         }
 
-        /* Induction section styles */
         .induction-card {
             background: rgba(15, 15, 15, 0.7);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 0, 0, 0.1);
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -226,7 +128,6 @@
             z-index: -1;
         }
 
-        /* Headlight beam effect */
         .headlight-beam {
             position: absolute;
             width: 100%;
@@ -236,7 +137,6 @@
             mix-blend-mode: screen;
         }
 
-        /* Blueprint overlay */
         .blueprint-overlay {
             position: fixed;
             top: 0;
@@ -248,13 +148,220 @@
             pointer-events: none;
             z-index: -1;
         }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .member-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            cursor: pointer;
+            /* Added frosted glass effect */
+            background: rgba(15, 15, 15, 0.7); /* Adjusted for consistency with blur */
+            backdrop-filter: blur(10px); /* Increased blur for more frosted look */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 0, 0.1);
+        }
+
+        .member-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.7) 80%);
+            z-index: 1;
+        }
+
+        .member-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .member-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            z-index: 2;
+            transform: translateY(0);
+            transition: all 0.4s ease;
+        }
+
+        .member-social {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 3;
+        }
+
+        .member-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .member-social a:hover {
+            background: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .member-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(255, 0, 0, 0.25);
+            transform: translateY(-10px);
+            border-color: rgba(255, 0, 0, 0.3);
+        }
+
+        .member-card:hover .member-img {
+            transform: scale(1.05);
+        }
+
+        .member-card:hover .member-info {
+            transform: translateY(-10px);
+        }
+
+        .member-card:hover .member-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .member-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: rgba(15, 15, 15, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        .modal.open .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close-button:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .event-details-toggle {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary);
+            font-weight: bold;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .event-details-toggle:hover {
+            color: var(--secondary);
+        }
+
+        .event-extra-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            padding-top: 0;
+        }
+
+        .event-extra-details.open {
+            max-height: 200px;
+            padding-top: 15px;
+        }
     </style>
 </head>
 <body>
-    <!-- Blueprint overlay -->
     <div class="blueprint-overlay"></div>
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-lg border-b border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -271,7 +378,7 @@
                         <a href="#gallery" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Gallery</a>
                         <a href="#events" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Events</a>
                         <a href="#contact" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Contact</a>
-                        <a href="#members" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Our Team</a>
+                        <a href="#" id="open-all-team-modal" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Our Team</a>
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -283,7 +390,7 @@
                 </div>
                 <div class="-mr-2 flex md:hidden">
                     <button type="button" id="mobile-menu-button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
@@ -291,7 +398,6 @@
             </div>
         </div>
         
-        <!-- Mobile menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black bg-opacity-90 backdrop-blur-sm">
               <a href="#home" class="orbitron text-white hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Home</a>
@@ -299,9 +405,9 @@
               <a href="#gallery" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Gallery</a>
               <a href="#events" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Events</a>
               <a href="#contact" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Contact</a>
-              <a href="#members" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Our Team</a>
+              <a href="#" id="open-all-team-modal-mobile" class="orbitron text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Our Team</a>
                 <div class="pt-2">
-                    <a href="#inductions" class="orbitron w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-md text-base font-medium">
+                    <a href="#inductions" class="orbitron w-full bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-md text-base font-medium text-center">
                         JOIN THE CLUB
                     </a>
                 </div>
@@ -309,24 +415,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Enhanced -->
     <section id="home" class="relative h-screen flex flex-col justify-center overflow-hidden">
-        <!-- Video Background -->
-        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+        <video autoplay muted loop class="absolute z-0 w-full h-full object-cover" style="pointer-events: none;">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-supercar-running-on-the-road-19756-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         
-        <!-- Gradient Overlay -->
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+
         <div class="absolute inset-0 hero-gradient z-10"></div>
         
-        <!-- Headlight Beam Effect -->
         <div class="headlight-beam"></div>
         
-        <!-- Road Lines Animation -->
         <div class="absolute bottom-0 left-0 right-0 h-20 z-20 road-lines"></div>
         
-        <!-- Hero Content -->
-         <div class="relative z-20 px-6 md:px-12 lg:px-24 text-center">
+        <div class="relative z-20 px-6 md:px-12 lg:px-24 text-center">
             <h1 class="orbitron text-4xl md:text-6xl lg:text-8xl font-bold mb-6 glow-text animate__animated animate__fadeInDown">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-600">HIGH OCTANE CLUB</span>
             </h1>
@@ -343,7 +446,6 @@
             </div>
         </div>
         
-        <!-- Scroll Down Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -351,88 +453,80 @@
         </div>
     </section>
 
-    <!-- About Section -->
-<section <section id="about" class="py-20 relative overflow-hidden">
-    <div class="absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-r from-red-500 to-red-600 rounded-full filter blur-3xl opacity-20"></div>
-    <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-gradient-to-r from-red-500 to-red-600 rounded-full filter blur-3xl opacity-20"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-animate>
-        <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">DRIVEN BY PASSION, POWERED BY PURPOSE</h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
-        <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-          Established in 2024 by the students of DPS Dwarka, the High Octane Club (HOC) was founded with a clear vision to harness a shared enthusiasm for automobiles and transform it into a platform for innovation, collaboration, and applied creativity.
-          <br><br>
-          What began as a passion project among a few dedicated individuals has since evolved into one of the school's most dynamic and respected student-led communities.
-        </p>
-      </div>
-  
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300" data-animate>
-        <!-- Card 1 -->
-        <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
-          <h3 class="orbitron text-xl font-bold mb-3">EVOLVING ENGAGEMENT</h3>
-          <p>
-            HOC has consistently redefined student engagement in automotive sciences, from hands-on custom builds and engineering challenges to strategic auction-style competitions that blend negotiation and analysis.
-          </p>
+    <section id="about" class="py-20 relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-r from-red-500 to-red-600 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-gradient-to-r from-red-500 to-red-600 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-animate>
+                <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">DRIVEN BY PASSION, POWERED BY PURPOSE</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Established in 2024 by the students of DPS Dwarka, the High Octane Club (HOC) was founded with a clear vision to harness a shared enthusiasm for automobiles and transform it into a platform for innovation, collaboration, and applied creativity.
+                    <br><br>
+                    What began as a passion project among a few dedicated individuals has since evolved into one of the school's most dynamic and respected student-led communities.
+                </p>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300" data-animate>
+                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <h3 class="orbitron text-xl font-bold mb-3">EVOLVING ENGAGEMENT</h3>
+                    <p>
+                        HOC has consistently redefined student engagement in automotive sciences, from hands-on custom builds and engineering challenges to strategic auction-style competitions that blend negotiation and analysis.
+                    </p>
+                </div>
+            
+                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <h3 class="orbitron text-xl font-bold mb-3">A PLATFORM FOR EXCELLENCE</h3>
+                    <p>
+                        The club serves as a platform for experiential learning, technical excellence, and forward-thinking exploration in the world of automobiles.
+                    </p>
+                </div>
+            
+                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <h3 class="orbitron text-xl font-bold mb-3">OUR MISSION</h3>
+                    <p>
+                        To educate, inspire, and empower students through immersive learning experiences, technical workshops, and collaborative initiatives that reflect the rapidly evolving landscape of automotive innovation.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="mt-16 text-center text-gray-300 max-w-4xl mx-auto text-lg" data-animate>
+                <p>
+                    At HOC, curiosity meets engineering discipline, and passion is driven by purpose. For students who are eager to explore the intersection of technology, performance, and design, the High Octane Club is the starting point of a journey defined by precision, ambition, and relentless momentum.
+                </p>
+            </div>
         </div>
+    </section>
   
-        <!-- Card 2 -->
-        <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
-          <h3 class="orbitron text-xl font-bold mb-3">A PLATFORM FOR EXCELLENCE</h3>
-          <p>
-            The club serves as a platform for experiential learning, technical excellence, and forward-thinking exploration in the world of automobiles.
-          </p>
+    <section id="gallery" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
+            <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">GALLERY</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-300">A glimpse into the action, adrenaline, and achievements of HOC’s finest moments.</p>
         </div>
-  
-        <!-- Card 3 -->
-        <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
-          <h3 class="orbitron text-xl font-bold mb-3">OUR MISSION</h3>
-          <p>
-            To educate, inspire, and empower students through immersive learning experiences, technical workshops, and collaborative initiatives that reflect the rapidly evolving landscape of automotive innovation.
-          </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg">
+            <img src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg" alt="Team members at an event" class="w-full h-auto object-cover">
+            </div>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg">
+            <img src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg" alt="Students working on a car model" class="w-full h-auto object-cover">
+            </div>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg">
+            <img src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg" alt="Club event in progress" class="w-full h-auto object-cover">
+            </div>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg">
+                <img src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg" alt="Club members discussing designs" class="w-full h-auto object-cover">
+            </div>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg">
+            <img src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg" alt="Automobile design sketch" class="w-full h-auto object-cover">
+            </div>
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg">
+            <img src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg" alt="Group photo of club members" class="w-full h-auto object-cover">
+            </div>
         </div>
-      </div>
-  
-      <div class="mt-16 text-center text-gray-300 max-w-4xl mx-auto text-lg" data-animate>
-        <p>
-          At HOC, curiosity meets engineering discipline, and passion is driven by purpose. For students who are eager to explore the intersection of technology, performance, and design, the High Octane Club is the starting point of a journey defined by precision, ambition, and relentless momentum.
-        </p>
-      </div>
-    </div>
-  </section>
-  
+    </section>
 
- <!-- Gallery Section -->
- <section id="gallery" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
-        <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">GALLERY</h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
-        <p class="text-lg text-gray-300">A glimpse into the action, adrenaline, and achievements of HOC’s finest moments.</p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-           <img src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg" alt="Whats-App-Image-2025-04-11-at-12-14-10-PM" border="0"></a>
-        </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-          <img src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg" alt="DSC-2204" border="0"></a>
-        </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-           <img src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg" alt="IMG-8550" border="0"></a>
-        </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-            <img src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg" alt="IMG-20241001-WA0026" border="0"></a>
-        </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-           <img src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg" alt="IMG-8562" border="0"></a>
-        </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105">
-        <img src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg" alt="DSC-2290" border="0"></a>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Events Section -->
     <section id="events" class="py-20 bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
             <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">UPCOMING EVENTS</h2>
@@ -444,193 +538,45 @@
             <div class="bg-gray-900 rounded-lg p-6 shadow-lg transform transition-all duration-500 hover:scale-105">
                 <h3 class="orbitron text-xl font-bold mb-2">AERHOX🔥</h3>
                 <p class="text-gray-300">Imagine a car that flies. Now sell it to the future.</p>
+                <div class="event-details-toggle" data-target="aerhox-details">
+                    <span class="toggle-text">More Details</span>
+                    <i class="fas fa-chevron-down toggle-icon transition-transform duration-300"></i>
+                </div>
+                <div id="aerhox-details" class="event-extra-details text-gray-400">
+                    <p><strong>Date:</strong> TBD, October 2025</p>
+                    <p><strong>Location:</strong> School Auditorium</p>
+                    <p>A hypothetical car design competition focusing on futuristic flying vehicles. Participants will present their concepts, engineering solutions, and marketing strategies to a panel of judges.</p>
+                </div>
             </div>
             <div class="bg-gray-900 rounded-lg p-6 shadow-lg transform transition-all duration-500 hover:scale-105">
                 <h3 class="orbitron text-xl font-bold mb-2">Drag Wars🏁</h3>
                 <p class="text-gray-300">Ready, set, mod!</p>
+                <div class="event-details-toggle" data-target="dragwars-details">
+                    <span class="toggle-text">More Details</span>
+                    <i class="fas fa-chevron-down toggle-icon transition-transform duration-300"></i>
+                </div>
+                <div id="dragwars-details" class="event-extra-details text-gray-400">
+                    <p><strong>Date:</strong> TBD, November 2025</p>
+                    <p><strong>Location:</strong> School Grounds</p>
+                    <p>A thrilling remote-controlled car drag racing event. Students will custom-build and tune their RC cars for maximum speed and performance on a straight track.</p>
+                </div>
             </div>
             <div class="bg-gray-900 rounded-lg p-6 shadow-lg transform transition-all duration-500 hover:scale-105">
                 <h3 class="orbitron text-xl font-bold mb-2">Rocket Rumble🚀</h3>
                 <p class="text-gray-300">Boost. Flip. Score. Prove your skills in the ultimate Rocket League throwdown!</p>
+                <div class="event-details-toggle" data-target="rocketr-details">
+                    <span class="toggle-text">More Details</span>
+                    <i class="fas fa-chevron-down toggle-icon transition-transform duration-300"></i>
+                </div>
+                <div id="rocketr-details" class="event-extra-details text-gray-400">
+                    <p><strong>Date:</strong> TBD, December 2025</p>
+                    <p><strong>Location:</strong> Gaming Lab</p>
+                    <p>An intense Rocket League tournament where teams battle it out to crown the champions of vehicular soccer. Strategy and quick reflexes are key!</p>
+                </div>
             </div>
         </div>
     </section>
-<!-- Team Page Container (Hidden by Default) -->
-<section id="team-page" class="fixed inset-0 z-50 bg-black bg-opacity-95 backdrop-blur-lg hidden overflow-y-auto transition-opacity duration-500 ease-in-out">
-    <!-- Close Button Top Right -->
-    <button id="close-team" class="fixed top-5 right-5 z-50 px-4 py-2 orbitron bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
-      <i class="fas fa-times"></i>
-    </button>
-  
-    <div class="max-w-7xl mx-auto px-4 pt-28 pb-20 sm:px-6 lg:px-8 animate__animated animate__fadeIn">
-      <div class="text-center mb-12">
-        <h2 class="orbitron text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 animate__fadeInDown animate__delay-1s">MEET THE TEAM</h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mt-4 mb-4"></div>
-        <p class="text-lg text-gray-300 animate__fadeInUp animate__delay-0.5s">The guys that make the magic happen...</p>
-      </div>
-  
-      <div class="member-grid animate__animated animate__fadeInUp animate__delay-1s">
-        <!-- Team Member -->
-        <!-- CORE MEMBERS -->
-         <div class="member-card bg-black bg-opacity-70 group">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Sidhh Rana">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white relative">
-        Sidhh Rana
-      </h3>
-      <p class="text-gray-300">President & Founder</p>
-    </div>
-    <div class="member-badge">Core</div>
-  </div>
-  
-<div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Armaan Bansal">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Armaan Bansal</h3>
-      <p class="text-gray-300">President & Founder</p>
-    </div>
-    <div class="member-badge">Core</div>
-  </div>
-  
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Atharv Malik">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Atharv Malik</h3>
-      <p class="text-gray-300">Vice President</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Shaardul Sahu">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Shaardul Sahu</h3>
-      <p class="text-gray-300">Vice President</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Apoorva">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Apoorva</h3>
-      <p class="text-gray-300">Secretary</p>
-    </div>
-  </div>
-  
-  <!-- EVENTS TEAM -->
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Vernica">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Vernica</h3>
-      <p class="text-gray-300">Event Head</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Anish Mittal">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Anish Mittal</h3>
-      <p class="text-gray-300">Event Head</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Chahat Negi">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Chahat Negi</h3>
-      <p class="text-gray-300">Event Member</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Divij Midha">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Divij Midha</h3>
-      <p class="text-gray-300">Event Member</p>
-    </div>
-  </div>
-  
-  <!-- RESEARCH TEAM -->
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Mishka Bansal">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Mishka Bansal</h3>
-      <p class="text-gray-300">Research Head</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Daman Grover">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Daman Grover</h3>
-      <p class="text-gray-300">Research Head</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Kshrija Singh">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Kshrija Singh</h3>
-      <p class="text-gray-300">Junior Researcher</p>
-    </div>
-  </div>
-  
-  <!-- TECH TEAM -->
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Jivansh Kain">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Jivansh Kain</h3>
-      <p class="text-gray-300">Tech Head</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Ayushmaan Singh">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Ayushmaan Singh</h3>
-      <p class="text-gray-300">Tech Member</p>
-    </div>
-  </div>
-  
-  <div class="member-card bg-black bg-opacity-70">
-    <img class="member-img" src="https://via.placeholder.com/400x400" alt="Tejas Chahar">
-    <div class="member-info">
-      <h3 class="orbitron text-xl font-bold text-white">Tejas Chahar</h3>
-      <p class="text-gray-300">Tech Member</p>
-    </div>
-  </div>
-  
-        <!-- Add more members below -->
-      </div>
-    </div>
-  </section>
-  
-  <script>
-    const teamPage = document.getElementById('team-page');
-    const closeTeam = document.getElementById('close-team');
-    const teamLinks = document.querySelectorAll('a[href="#members"]');
-  
-    teamLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        teamPage.scrollTop = 0;
-        teamPage.classList.remove('hidden');
-        teamPage.classList.add('opacity-100');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-  
-    closeTeam.addEventListener('click', () => {
-      teamPage.classList.add('opacity-0');
-      setTimeout(() => {
-        teamPage.classList.add('hidden');
-        teamPage.classList.remove('opacity-0');
-        document.body.style.overflow = '';
-      }, 400);
-    });
-  </script>
-  
-    <!-- Inductions Section -->
+
     <section id="inductions" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
             <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">INDUCTIONS '25 COMING SOON</h2>
@@ -646,64 +592,218 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-<section id="contact" class="py-20 bg-gray-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
-    <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-      CONTACT US
-    </h2>
-    <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
-    <p class="text-lg text-gray-300">Have questions or want to learn more? Reach out to us...</p>
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
+            <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+            CONTACT US
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">Have questions or want to learn more? Reach out to us...</p>
+        </div>
 
-    <form action="https://formsubmit.co/highoctaneclubdps@gmail.com" method="POST" class="mt-8 max-w-md mx-auto">
-      <!-- Hidden Settings -->
-      <input type="hidden" name="_subject" value="New Contact Message!">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
-      
+        <!-- Frosted glass box for the contact form and social links -->
+        <div class="bg-gray-900 bg-opacity-70 backdrop-blur-xl rounded-xl p-8 border border-red-700 shadow-lg glow-box max-w-2xl mx-auto" data-animate>
+            <form action="https://formsubmit.co/highoctaneclubdps@gmail.com" method="POST" class="mt-0 max-w-lg mx-auto" id="contact-form">
+                <input type="hidden" name="_subject" value="New Contact Message!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                
+                <input type="text" name="user_name" placeholder="Your Name" required
+                    class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <input type="email" name="user_email" placeholder="Your Email" required
+                    class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <textarea name="message" placeholder="Your Message" required
+                    class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    rows="4"></textarea>
 
-      <!-- Form Fields -->
-      <input type="text" name="user_name" placeholder="Your Name" required
-        class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500">
-      <input type="email" name="user_email" placeholder="Your Email" required
-        class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500">
-      <textarea name="message" placeholder="Your Message" required
-        class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-red-500"
-        rows="4"></textarea>
+                <button type="submit" id="contact-submit-button"
+                    class="orbitron bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg text-lg font-bold shadow-lg glow-box transform transition-all duration-500 hover:scale-105">
+                    SEND MESSAGE
+                </button>
+            </form>
 
-      <!-- Submit Button -->
-      <button type="submit"
-        class="orbitron bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg text-lg font-bold shadow-lg glow-box transform transition-all duration-500 hover:scale-105">
-        SEND MESSAGE
-      </button>
-    </form>
-  </div>
-</section>
+            <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-6 text-gray-300 text-xl">
+                <a href="mailto:highoctaneclubdps@gmail.com" class="flex items-center gap-2 hover:text-red-500 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
+                <i class="fa-solid fa-envelope text-2xl"></i>
+                <span class="text-base md:text-lg">highoctaneclubdps@gmail.com</span>
+                </a>
+                <a href="https://www.instagram.com/highoctaneclubdpsdw/" target="_blank" class="flex items-center gap-2 hover:text-red-500 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+                <span class="text-base md:text-lg">@highoctaneclubdpsdw</span>
+                </a>
+            </div>
+        </div>
+    </section>
     
-<!-- Social Icons with Red Glow on Hover -->
-<div class="mt-10 flex justify-center items-center space-x-10 text-gray-300 text-xl">
-    <a href="mailto:highoctaneclubdps@gmail.com" class="flex items-center gap-2 hover:text-red-500 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
-      <i class="fa-solid fa-envelope text-2xl"></i>
-      <span class="text-base md:text-lg">highoctaneclubdps@gmail.com</span>
-    </a>
-    <a href="https://www.instagram.com/highoctaneclubdpsdw/" target="_blank" class="flex items-center gap-2 hover:text-red-500 transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
-      <i class="fa-brands fa-instagram text-2xl"></i>
-      <span class="text-base md:text-lg">@highoctaneclubdpsdw</span>
-    </a>
-  </div>
-  
-  
-  </section>
-
-    <!-- Footer -->
     <footer class="bg-gray-900 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-gray-400">fuelled by gasoline</p>
         </div>
     </footer>
 
+    <div id="gallery-lightbox-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close-button" id="lightbox-close-button"><i class="fas fa-times"></i></button>
+            <img id="lightbox-image" src="" alt="Gallery Image" class="lightbox-img">
+        </div>
+    </div>
+
+    <div id="all-team-members-modal" class="modal">
+        <div class="modal-content text-center p-8 rounded-lg w-11/12 md:w-4/5 lg:w-3/4">
+            <button class="modal-close-button" id="all-team-modal-close-button"><i class="fas fa-times"></i></button>
+            <h2 class="orbitron text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 mb-8">MEET THE TEAM</h2>
+            <div class="member-grid" id="all-team-members-grid-container">
+                </div>
+        </div>
+    </div>
+
+    <div id="team-details-modal" class="modal">
+        <div class="modal-content text-center p-8 rounded-lg">
+            <button class="modal-close-button" id="team-modal-close-button"><i class="fas fa-times"></i></button>
+            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                <img id="modal-member-img" src="" alt="Team Member" class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-red-500 shadow-lg mb-4 md:mb-0">
+                <div class="text-left">
+                    <h3 id="modal-member-name" class="orbitron text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 mb-2"></h3>
+                    <p id="modal-member-role" class="text-red-300 text-lg mb-4"></p>
+                    <p id="modal-member-bio" class="text-gray-300 text-base leading-relaxed mb-6"></p>
+                    <div id="modal-member-social" class="flex justify-center md:justify-start gap-4">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Mobile menu toggle
+        const teamMembers = [
+            { id: 'sidhh-rana', name: 'Sidhh Rana', role: 'President & Founder', img: 'https://via.placeholder.com/400x400/FF0000/FFFFFF?text=SR', bio: 'Driven by a vision to revolutionize automotive education for students, Sidhh co-founded HOC. He leads strategic initiatives and fosters a culture of innovation.', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+            { id: 'armaan-bansal', name: 'Armaan Bansal', role: 'President & Founder', img: 'https://via.placeholder.com/400x400/FF0000/FFFFFF?text=AB', bio: 'A passionate automotive enthusiast, Armaan focuses on expanding HOC\'s reach and building strong community ties. His leadership ensures dynamic and engaging events.', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+            { id: 'atharv-malik', name: 'Atharv Malik', role: 'Vice President', img: 'https://via.placeholder.com/400x400/FF0000/FFFFFF?text=AM', bio: 'Atharv oversees daily operations and supports the presidents in achieving club objectives. His organizational skills are key to HOC\'s smooth functioning.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'shaardul-sahu', name: 'Shaardul Sahu', role: 'Vice President', img: 'https://via.placeholder.com/400x400/FF0000/FFFFFF?text=SS', bio: 'Shaardul is instrumental in coordinating various club activities and ensuring member satisfaction. He brings creative ideas to the forefront of our projects.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'apoorva', name: 'Apoorva', role: 'Secretary', img: 'https://via.placeholder.com/400x400/FF0000/FFFFFF?text=AP', bio: 'Apoorva manages club communications, records, and administrative tasks, keeping everyone informed and organized. Her attention to detail is invaluable.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            // Events Team
+            { id: 'vernica', name: 'Vernica', role: 'Event Head', img: 'https://via.placeholder.com/400x400/007BFF/FFFFFF?text=VE', bio: 'Vernica spearheads the planning and execution of all HOC events, ensuring they are engaging and memorable experiences for participants.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'anish-mittal', name: 'Anish Mittal', role: 'Event Head', img: 'https://via.placeholder.com/400x400/007BFF/FFFFFF?text=AM', bio: 'Anish brings innovative ideas to our events, helping to design unique competitions and workshops that challenge and excite our members.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'chahat-negi', name: 'Chahat Negi', role: 'Event Member', img: 'https://via.placeholder.com/400x400/007BFF/FFFFFF?text=CN', bio: 'Chahat assists in the logistical aspects of events, ensuring seamless execution and a great experience for all attendees.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'divij-midha', name: 'Divij Midha', role: 'Event Member', img: 'https://via.placeholder.com/400x400/007BFF/FFFFFF?text=DM', bio: 'Divij is a key player in brainstorming and organizing event activities, contributing creative solutions and a strong work ethic.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            // Research Team
+            { id: 'mishka-bansal', name: 'Mishka Bansal', role: 'Research Head', img: 'https://via.placeholder.com/400x400/28A745/FFFFFF?text=MB', bio: 'Mishka leads the research team, exploring new automotive technologies, trends, and topics to keep HOC at the forefront of industry knowledge.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'daman-grover', name: 'Daman Grover', role: 'Research Head', img: 'https://via.placeholder.com/400x400/28A745/FFFFFF?text=DG', bio: 'Daman is passionate about uncovering deep insights and technical specifications, providing valuable information for club projects and discussions.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'kshrija-singh', name: 'Kshrija Singh', role: 'Junior Researcher', img: 'https://via.placeholder.com/400x400/28A745/FFFFFF?text=KS', bio: 'Kshrija supports the research team in gathering and analyzing data, contributing to the club\'s knowledge base.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            // Tech Team
+            { id: 'jivansh-kain', name: 'Jivansh Kain', role: 'Tech Head', img: 'https://via.placeholder.com/400x400/DC3545/FFFFFF?text=JK', bio: 'Jivansh leads our tech initiatives, ensuring all our digital platforms and technical projects are robust and innovative.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'ayushmaan-singh', name: 'Ayushmaan Singh', role: 'Tech Member', img: 'https://via.placeholder.com/400x400/DC3545/FFFFFF?text=AS', bio: 'Ayushmaan contributes to the technical development and maintenance of club resources, bringing his coding expertise to the team.', social: [{ icon: 'fab fa-instagram', url: '#' }] },
+            { id: 'tejas-chahar', name: 'Tejas Chahar', role: 'Tech Member', img: 'https://via.placeholder.com/400x400/DC3545/FFFFFF?text=TC', bio: 'Tejas assists in various tech projects, from website updates to specialized software, ensuring smooth operation of our digital tools.', social: [{ icon: 'fab fa-instagram', url: '#' }] }
+        ];
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff0000"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ff3333",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 150,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -711,7 +811,13 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Scroll animations
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         const animateElements = document.querySelectorAll('[data-animate]');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -720,10 +826,184 @@
                     observer.unobserve(entry.target);
                 }
             });
+        }, {
+            threshold: 0.1
         });
 
         animateElements.forEach(element => {
             observer.observe(element);
+        });
+
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightboxModal = document.getElementById('gallery-lightbox-modal');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxCloseButton = document.getElementById('lightbox-close-button');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightboxImage.src = item.dataset.src;
+                lightboxModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxCloseButton.addEventListener('click', () => {
+            lightboxModal.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('open')) {
+                lightboxModal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        const teamDetailsModal = document.getElementById('team-details-modal');
+        const teamModalCloseButton = document.getElementById('team-modal-close-button');
+        const modalMemberImg = document.getElementById('modal-member-img');
+        const modalMemberName = document.getElementById('modal-member-name');
+        const modalMemberRole = document.getElementById('modal-member-role');
+        const modalMemberBio = document.getElementById('modal-member-bio');
+        const modalMemberSocial = document.getElementById('modal-member-social');
+
+        // Close button for the single team member details modal
+        teamModalCloseButton.addEventListener('click', () => {
+            teamDetailsModal.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Close when clicking outside the modal content for single team member details modal
+        teamDetailsModal.addEventListener('click', (e) => {
+            if (e.target === teamDetailsModal) {
+                teamDetailsModal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+
+        function openTeamMemberModal(member) {
+            modalMemberImg.src = member.img;
+            modalMemberImg.alt = member.name;
+            modalMemberName.textContent = member.name;
+            modalMemberRole.textContent = member.role;
+            modalMemberBio.textContent = member.bio;
+
+            modalMemberSocial.innerHTML = '';
+            member.social.forEach(s => {
+                const link = document.createElement('a');
+                link.href = s.url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.className = 'text-gray-400 hover:text-red-500 transition-colors duration-300';
+                link.innerHTML = `<i class="${s.icon} text-2xl"></i>`;
+                modalMemberSocial.appendChild(link);
+            });
+
+            teamDetailsModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        const allTeamMembersModal = document.getElementById('all-team-members-modal');
+        const allTeamModalCloseButton = document.getElementById('all-team-modal-close-button');
+        const openAllTeamModalBtn = document.getElementById('open-all-team-modal');
+        const openAllTeamModalMobileBtn = document.getElementById('open-all-team-modal-mobile');
+        const allTeamMembersGridContainer = document.getElementById('all-team-members-grid-container');
+
+        if (allTeamMembersGridContainer) {
+            teamMembers.forEach(member => {
+                const memberCard = document.createElement('div');
+                // Removed bg-black bg-opacity-70 from here as it's now handled by the .member-card CSS rule
+                memberCard.className = 'member-card glow-box'; 
+                memberCard.innerHTML = `
+                    <img class="member-img" src="${member.img}" alt="${member.name}">
+                    <div class="member-info">
+                        <h3 class="orbitron text-xl font-bold text-white relative">${member.name}</h3>
+                        <p class="text-gray-300">${member.role}</p>
+                    </div>
+                    ${member.role.includes('President') || member.role.includes('Secretary') ? '<div class="member-badge">Core</div>' : ''}
+                `;
+                memberCard.addEventListener('click', () => {
+                    openTeamMemberModal(member);
+                });
+                allTeamMembersGridContainer.appendChild(memberCard);
+            });
+        }
+
+        if (openAllTeamModalBtn) {
+            openAllTeamModalBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                allTeamMembersModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                mobileMenu.classList.add('hidden');
+            });
+        }
+        if (openAllTeamModalMobileBtn) {
+            openAllTeamModalMobileBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                allTeamMembersModal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        allTeamModalCloseButton.addEventListener('click', () => {
+            allTeamMembersModal.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        allTeamMembersModal.addEventListener('click', (e) => {
+            if (e.target === allTeamMembersModal) {
+                allTeamMembersModal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const isAnyModalOpen = teamDetailsModal.classList.contains('open') || allTeamMembersModal.classList.contains('open');
+
+            if (e.key === 'Escape' && isAnyModalOpen) {
+                if (teamDetailsModal.classList.contains('open')) {
+                    teamDetailsModal.classList.remove('open');
+                } else if (allTeamMembersModal.classList.contains('open')) {
+                    allTeamMembersModal.classList.remove('open');
+                }
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.querySelectorAll('.event-details-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.dataset.target;
+                const extraDetails = document.getElementById(targetId);
+                const toggleIcon = toggle.querySelector('.toggle-icon');
+
+                if (extraDetails.classList.contains('open')) {
+                    extraDetails.classList.remove('open');
+                    toggleIcon.classList.remove('rotate-180');
+                    toggle.querySelector('.toggle-text').textContent = 'More Details';
+                } else {
+                    extraDetails.classList.add('open');
+                    toggleIcon.classList.add('rotate-180');
+                    toggle.querySelector('.toggle-text').textContent = 'Show Less';
+                }
+            });
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = document.getElementById('contact-submit-button');
+
+        contactForm.addEventListener('submit', () => {
+            submitButton.textContent = 'SENDING...';
+            submitButton.disabled = true;
+            submitButton.classList.add('opacity-70', 'cursor-not-allowed');
         });
     </script>
 </body>
