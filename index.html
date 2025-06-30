@@ -357,6 +357,34 @@
             max-height: 200px;
             padding-top: 15px;
         }
+        /* --- Gallery Item Caption Styles --- */
+.gallery-item-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 1rem; /* 16px */
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+}
+
+.gallery-item:hover .gallery-item-caption {
+    transform: translateY(0);
+}
+
+.gallery-item-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--light);
+    font-size: 1rem; /* 16px */
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
     </style>
 </head>
 <body>
@@ -506,23 +534,41 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg">
-            <img src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg" alt="Team members at an event" class="w-full h-auto object-cover">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg">
+                <img src="https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg" alt="Team members at an event" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">Workshop '25</h3>
+                </div>
             </div>
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg">
-            <img src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg" alt="Students working on a car model" class="w-full h-auto object-cover">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg">
+                <img src="https://i.ibb.co/d07XKQ2F/DSC-2204.jpg" alt="Students working on a car model" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">Circuit Serenity '25</h3>
+                </div>
             </div>
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg">
-            <img src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg" alt="Club event in progress" class="w-full h-auto object-cover">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg">
+                <img src="https://i.ibb.co/KjsnSXfy/IMG-8550.jpg" alt="Club event in progress" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">Workshop '25</h3>
+                </div>
             </div>
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg">
                 <img src="https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg" alt="Club members discussing designs" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">RPM Auction '24</h3>
+                </div>
             </div>
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg">
-            <img src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg" alt="Automobile design sketch" class="w-full h-auto object-cover">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg">
+                <img src="https://i.ibb.co/rRXKJsbj/IMG-8562.jpg" alt="Automobile design sketch" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">Workshop '25</h3>
+                </div>
             </div>
-            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg">
-            <img src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg" alt="Group photo of club members" class="w-full h-auto object-cover">
+            <div class="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 cursor-pointer gallery-item" data-src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg">
+                <img src="https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg" alt="Group photo of club members" class="w-full h-auto object-cover">
+                <div class="gallery-item-caption">
+                    <h3 class="gallery-item-title">Circuit Serenity '25</h3>
+                </div>
             </div>
         </div>
     </section>
