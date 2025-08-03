@@ -281,18 +281,20 @@
         }
 
         .modal-content {
-            background: rgba(15, 15, 15, 0.9);
-            border-radius: 15px;
-            padding: 20px;
-            max-width: 90%;
-            max-height: 90%;
-            overflow-y: auto;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 0, 0, 0.2);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-        }
+    background: rgba(15, 15, 15, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 96vw; 
+    width: 96vw; 
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
 
         .modal.open .modal-content {
             transform: scale(1);
@@ -384,6 +386,43 @@
     text-align: center;
     margin: 0;
 }
+.neon-glitch {
+    position: relative;
+    color: #fff;
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff3333,
+        0 0 20px #ff4d4d,
+        0 0 40px #ff6666;
+    animation: glitch 1s infinite linear alternate;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  20% {
+    transform: translate(-1px, 1px);
+    text-shadow: -2px -1px magenta, 2px 1px lime;
+  }
+  40% {
+    transform: translate(1px, -1px);
+    text-shadow: 2px -1px red, -2px 1px cyan;
+  }
+  60% {
+    transform: translate(-1px, 0);
+    text-shadow: -2px 0 magenta, 2px 0 lime;
+  }
+  80% {
+    transform: translate(1px, 1px);
+    text-shadow: 2px 1px red, -2px -1px cyan;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: 0 0 5px red, 0 0 10px red;
+  }
+}
 
     </style>
 </head>
@@ -458,15 +497,16 @@
         <div class="absolute bottom-0 left-0 right-0 h-20 z-20 road-lines"></div>
         
         <div class="relative z-20 px-6 md:px-12 lg:px-24 text-center">
-            <h1 class="orbitron text-4xl md:text-6xl lg:text-8xl font-bold mb-6 glow-text animate__animated animate__fadeInDown">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-600">HIGH OCTANE CLUB</span>
-            </h1>
+            <h1 class="orbitron neon-glitch text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6">
+                HIGH OCTANE CLUB
+              </h1>
+              
             
             <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 animate__animated animate__fadeInUp animate__delay-1s">
                 #REVVON!!!
             </p>
             
-            <div class="animate__animated animate__fadeInUp animate__delay-2s">
+            <div class="animate__animated animate__fadeInUp animate__delay-s">
                 <a href="#events" class="orbitron inline-block relative overflow-hidden bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg glow-box transform transition-all duration-500 hover:scale-105 hover:shadow-xl pulse-effect">
                     <span class="relative z-20">EXPLORE OUR EVENTS</span>
                     <span class="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"></span>
@@ -684,7 +724,8 @@
     
     <footer class="bg-gray-900 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">fuelled by gasoline</p>
+            <p class="text-gray-400">fuelled by gasoline(and made by sidhh)</p>
+            <p class="text-gray-400">version 1.0</p>
         </div>
     </footer>
     <div id="all-team-members-modal" class="modal">
@@ -812,17 +853,17 @@
         
   { id: 'sidhh', name: 'Sidhh Rana (XII)', role: 'President', bio: 'high on anything and everything', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Sidhh', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'armaan', name: 'Armaan Bansal (XII)', role: 'President', bio: 'i would ask for your digits but your plate works too', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Armaan', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
-  { id: 'atharv', name: 'Atharv Malik (XII)', role: 'Vice President', bio: 'Smooth Operator', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Atharv', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+  { id: 'atharv', name: 'Atharv Malik (XII)', role: 'Vice President', bio: 'Driven on skil', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Atharv', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'shaardul', name: 'Shaardul (XII)', role: 'Vice President', bio: 'sannu ki', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Shaardul', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'yash', name: 'Yash (XII)', role: 'Vice President', bio: 'existing', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Yash', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'jivansh', name: 'Jivansh (XII)', role: 'Secretary', bio: 'i make my own luck', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Jivansh', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'arnav', name: 'Arnav Saxena (XI)', role: 'Secretary', bio: 'Where the road begins', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Arnav', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'jahnavi', name: 'Jahnavi (XII)', role: 'Tech Head', bio: 'somewhere btw psychotic and chaotic', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Jahnavi', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
-  { id: 'ayushmaan', name: 'Ayushmaan Singh (X)', role: 'Tech Member', bio: 'Burning rubber chasing dreams', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Ayushmaan', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+  { id: 'ayushmaan', name: 'Ayushmaan Singh (X)', role: 'Tech Member', bio: 'V8 go vroom vroom', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Ayushmaan', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'tejas', name: 'Tejas Chahar (X)', role: 'Tech Member', bio: 'built for speed , parked for snacks', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Tejas', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
-  { id: 'anmol', name: 'Anmol Vishwakarma (X)', role: 'Tech Member', bio: 'the silent chip whisperer', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Anmol', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+  { id: 'anmol', name: 'Anmol Vishwakarma (X)', role: 'Tech Member', bio: 'My downfall is better than your prime', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Anmol', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'vernica', name: 'Vernica (XII)', role: 'Event Head', bio: 'high on octane low on caffeine', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Vernica', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
-  { id: 'chahat', name: 'Chahat Negi (X)', role: 'Event Team Member', bio: 'event ninja', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Chahat', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+  { id: 'chahat', name: 'Chahat Negi (X)', role: 'Event Team Member', bio: 'Dream core soul with a reality check', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Chahat', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'kshrija', name: 'Kshrija Singh (IX)', role: 'Event Team Member', bio: 'What’s hard to reach is where I feel at home.', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Kshrija', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'mishka', name: 'Mishka Bansal (XII)', role: 'Research Head', bio: 'locked in', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Mishka', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'naysa', name: 'Naysa Grover (XI)', role: 'Research Team Member', bio: 'they hate us cuz they ain’t us', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Naysa', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
