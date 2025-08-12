@@ -14,6 +14,14 @@
         *, *::before, *::after {
             box-sizing: border-box;
         }
+        .member-tagline {
+    font-style: italic;
+    color: #ff4d4d; /* Your brand red */
+    font-size: 0.9rem;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    display: block;
+    margin-top: 6px;
+}
 
         html {
             overflow-x: hidden;
@@ -513,6 +521,10 @@
                 </a>
             </div>
         </div>
+        <div class="text-xs text-gray-400 max-w-3xl mx-auto mb-10" data-reveal>
+            <span class="inline-flex items-center gap-2"><i class="fa fa-calendar text-sm"></i> Established 2024</span>
+        </div>
+        
         
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -537,6 +549,7 @@
         
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300" data-animate>
                 <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <i class="fa-solid fa-gears text-red-500 text-4xl mb-4"></i>
                     <h3 class="orbitron text-xl font-bold mb-3">EVOLVING ENGAGEMENT</h3>
                     <p>
                         HOC has consistently redefined student engagement in automotive sciences, from hands-on custom builds and engineering challenges to strategic auction-style competitions that blend negotiation and analysis.
@@ -544,6 +557,7 @@
                 </div>
             
                 <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <i class="fa-solid fa-trophy text-red-500 text-4xl mb-4"></i>
                     <h3 class="orbitron text-xl font-bold mb-3">A PLATFORM FOR EXCELLENCE</h3>
                     <p>
                         The club serves as a platform for experiential learning, technical excellence, and forward-thinking exploration in the world of automobiles.
@@ -551,6 +565,7 @@
                 </div>
             
                 <div class="bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-gray-800 glow-box">
+                    <i class="fa-solid fa-flag-checkered text-red-500 text-4xl mb-4"></i>
                     <h3 class="orbitron text-xl font-bold mb-3">OUR MISSION</h3>
                     <p>
                         To educate, inspire, and empower students through immersive learning experiences, technical workshops, and collaborative initiatives that reflect the rapidly evolving landscape of automotive innovation.
@@ -613,7 +628,7 @@
         </div>
     </section>
 
-    <section id="events" class="py-20 bg-gray-800">
+    <section id="events" class="py-20 relative overflow-hidden bg-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
             <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">UPCOMING EVENTS</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
@@ -664,7 +679,7 @@
     </section>
 
 <!---
-    <section id="inductions" class="py-20">
+    <section id="inductions" class="class="py-20 relative overflow-hidden bg-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
             <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">INDUCTIONS '25 COMING SOON</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6"></div>
@@ -679,7 +694,7 @@
         </div>
     </section>
 -->
-    <section id="contact" class="py-20 bg-gray-800">
+        <section id="contact" class="py-20 relative overflow-hidden bg-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16" data-animate>
             <h2 class="orbitron text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
             CONTACT US
@@ -725,7 +740,7 @@
     <footer class="bg-gray-900 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-gray-400">fuelled by gasoline(and made by sidhh)</p>
-            <p class="text-gray-400">version 1.0</p>
+            <p class="text-gray-400">version 1.1</p>
         </div>
     </footer>
     <div id="all-team-members-modal" class="modal">
@@ -872,7 +887,7 @@
   { id: 'divij', name: 'Divij Midha (X)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Divij', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'vedaang', name: 'Vedaang Dutt (X)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Vedaang', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'aayushi', name: 'Aayushi Kukreja (XI)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Aayushi', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
-  { id: 'ayushk', name: 'Ayush Kumar (XI)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=AyushK', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
+  { id: 'ayushk', name: 'Ayush Kumar (XI)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Ayush', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] },
   { id: 'apoorva', name: 'Apoorva (XII)', role: 'Member', bio: '', img: 'https://placehold.co/400x400/FF0000/FFFFFF?text=Apoorva', social: [{ icon: 'fab fa-instagram', url: '#' }, { icon: 'fab fa-linkedin-in', url: '#' }] }
 
 
@@ -1176,16 +1191,22 @@
         if (allTeamMembersGridContainer) {
             teamMembers.forEach(member => {
                 const memberCard = document.createElement('div');
-                // Removed bg-black bg-opacity-70 from here as it's now handled by the .member-card CSS rule
-                memberCard.className = 'member-card glow-box'; 
-                memberCard.innerHTML = `
-                    <img class="member-img" src="${member.img}" alt="${member.name}">
-                    <div class="member-info">
-                        <h3 class="orbitron text-xl font-bold text-white relative">${member.name}</h3>
-                        <p class="text-gray-300">${member.role}</p>
-                    </div>
-                    ${member.role.includes('President') || member.role.includes('Secretary') ? '<div class="member-badge">Core</div>' : ''}
-                `;
+// Removed bg-black bg-opacity-70 from here as it's now handled by the .member-card CSS rule
+memberCard.className = 'member-card glow-box';
+memberCard.innerHTML = `
+    <img class="member-img" src="${member.img}" alt="${member.name}">
+    <div class="member-info">
+        <h3 class="orbitron text-xl font-bold text-white relative">${member.name}</h3>
+        <p class="text-red-500 font-semibold">${member.role}</p>
+        <p class="member-tagline">"${member.bio}"</p>
+    </div>
+    ${member.role.includes('President') || member.role.includes('Secretary') ? '<div class="member-badge">Core</div>' : ''}
+`;
+
+
+;
+document.head.appendChild(styleTagline);
+
                 memberCard.addEventListener('click', () => {
                     openTeamMemberModal(member);
                 });
