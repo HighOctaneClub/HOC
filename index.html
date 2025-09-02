@@ -9,13 +9,13 @@
   <meta name="keywords" content="High Octane Club, HOC, DPS Dwarka, automobile club, motorsport, student club" />
   <meta name="theme-color" content="#0a0a0a" />
 
-
+  <!-- OpenGraph / Social -->
   <meta property="og:title" content="High Octane Club — Official" />
   <meta property="og:description" content="Workshops, events, galleries and more. #REVVON" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.ibb.co/70mk5KJ/High-Octane-Club.png" />
 
-
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -61,13 +61,13 @@
     }
   </script>
 
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
-   
+    /* Subtle film grain */
     .noise {
       position: absolute; inset: -1px; pointer-events:none; opacity:.12; mix-blend-mode: soft-light;
       background-image: url('data:image/svg+xml;utf8,\
@@ -76,7 +76,7 @@
         <rect width="100%" height="100%" filter="url(%23n)" opacity="0.6"/>\
       </svg>');
     }
-    
+    /* Reduced motion accessibility */
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
     }
@@ -153,10 +153,10 @@
     </div>
   </header>
 
- 
+  <!-- Hero -->
   <section id="home" class="relative pt-28">
   <div class="absolute inset-0 -z-10">
-
+    <!-- gradient beams -->
     <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-[38rem] w-[38rem] rounded-full bg-brand-700/30 blur-3xl"></div>
     <div class="absolute top-40 -left-32 h-72 w-72 rounded-full bg-brand-500/20 blur-2xl"></div>
   </div>
@@ -191,11 +191,12 @@
             type="video/mp4" />
         </video>
 
-        
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm">
-          <p class="text-sm md:text-lg text-white/80 tracking-wide uppercase mb-4">Annual Fest '25</p>
-          <div id="countdown" class="flex gap-3"></div>
+        <!-- Responsive Instagram-style Countdown Overlay -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm px-3">
+          <p class="text-xs sm:text-sm md:text-lg text-white/80 tracking-wide uppercase mb-3 text-center">
+            Annual Fest '25
+          </p>
+          <div id="countdown" class="flex gap-2 sm:gap-3 w-full max-w-md justify-center flex-wrap"></div>
         </div>
       </div>
     </div>
@@ -208,22 +209,23 @@
     color: #111;
     font-family: 'Orbitron', monospace;
     font-weight: 700;
-    font-size: 1.5rem;
-    padding: 0.75rem 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem); /* auto scales text */
+    padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    min-width: 60px;
+    flex: 1 1 auto; /* makes boxes shrink/grow evenly */
+    min-width: 55px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .count-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 500;
     color: #333;
     text-transform: uppercase;
-    margin-top: 0.25rem;
-    letter-spacing: 0.05em;
+    margin-top: 0.2rem;
     display: block;
+    letter-spacing: 0.05em;
   }
 </style>
 
@@ -237,7 +239,7 @@
     const distance = targetDate - now;
 
     if (distance < 0) {
-      countdown.innerHTML = "<span class='text-white text-xl font-bold'>It's Fest Day! 🎉</span>";
+      countdown.innerHTML = "<span class='text-white text-base sm:text-xl font-bold'>It's Fest Day! 🎉</span>";
       return;
     }
 
@@ -274,7 +276,7 @@
         <div class="rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent shadow-glow">
           <div class="text-brand-400">🏁</div>
           <h3 class="mt-3 font-display font-semibold">A PLATFORM FOR EXCELLENCE</h3>
-          <p class="mt-2 text-white/70">The club serves as a platform for experiential learning, technical excellence, and forward-thinking exploration in the world of automobiles.</p>
+          <p class="mt-2 text-white/70">FThe club serves as a platform for experiential learning, technical excellence, and forward-thinking exploration in the world of automobiles.</p>
         </div>
         <div class="rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent shadow-glow">
           <div class="text-brand-400">🔬</div>
@@ -399,8 +401,8 @@
       {src:'https://i.ibb.co/d07XKQ2F/DSC-2204.jpg', title:"Circuit Serenity '25"},
       {src:'https://i.ibb.co/KjsnSXfy/IMG-8550.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg', title:"RPM Auction '24"},
-      {src:'https://i.ibb.co/rRXKJsbj/IMG-8562.jpg', title:"Workshop '25"},
-      {src:'https://i.ibb.co/xqFmF4jJ/DSC-2290.jpg', title:"Circuit Serenity '25"}
+      {src:'https://i.ibb.co/tTTvnwmq/build-a-beast.jpg', title:"Build-A-Beast '25"},
+      {src:'https://i.ibb.co/sdVw61CH/Whats-App-Image-2025-08-06-at-14-55-54-a22cfed2.jpg', title:"Build-A-Beast '25"}
     ];
 
     const events = [
@@ -410,14 +412,14 @@
     ];
 
     const team = [
-      { name:'Sidhh Rana (XII)', role:'President', bio:'high on anything and everything', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Sidhh' },
-      { name:'Armaan Bansal (XII)', role:'President', bio:'i would ask for your digits but your plate works too', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Armaan' },
-      { name:'Atharv Malik (XII)', role:'Vice President', bio:'Driven on skil', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Atharv' },
-      { name:'Shaardul (XII)', role:'Vice President', bio:'sannu ki', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Shaardul' },
-      { name:'Yash (XII)', role:'Vice President', bio:'existing', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Yash' },
-      { name:'Jivansh (XII)', role:'Secretary', bio:'i make my own luck', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Jivansh' },
-      { name:'Arnav Saxena (XI)', role:'Secretary', bio:'Where the road begins', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Arnav' },
-      { name:'Jahnavi (XII)', role:'Tech Head', bio:'somewhere btw psychotic and chaotic', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Jahnavi' },
+      { name:'Sidhh Rana (XII)', role:'President', bio:'high on anything and everything', img:'https://i.ibb.co/wNK44Yc3/IMG-8531.jpg' },
+      { name:'Armaan Bansal (XII)', role:'President', bio:'i would ask for your digits but your plate works too', img:'https://i.ibb.co/pjG6sgWC/arma.jpg' },
+      { name:'Atharv Malik (XII)', role:'Vice President', bio:'Driven on skil', img:'https://i.ibb.co/j95jCgq5/ath.jpg' },
+      { name:'Shaardul (XII)', role:'Vice President', bio:'ki fark penda?', img:'https://i.ibb.co/TMRQgCsJ/Whats-App-Image-2025-09-02-at-20-18-58-d7219292.jpg' },
+      { name:'Yash (XII)', role:'Vice President', bio:'existing', img:'https://i.ibb.co/vxbCdLvP/yash.jpg' },
+      { name:'Jivansh (XII)', role:'Secretary', bio:'i make my own luck', img:'https://i.ibb.co/TD4b64GJ/jivansh.jpg' },
+      { name:'Arnav Saxena (XI)', role:'Secretary', bio:'Where the road begins', img:'https://i.ibb.co/yBRcwz34/Whats-App-Image-2025-09-02-at-20-01-00-d95b9ec3.jpg' },
+      { name:'Jahnavi (XII)', role:'Tech Head', bio:'somewhere btw psychotic and chaotic', img:'https://i.ibb.co/wNgy54ms/jhanvi.jpg' },
       { name:'Ayushmaan Singh (X)', role:'Tech Member', bio:'V8 go vroom vroom', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Ayushmaan' },
       { name:'Tejas Chahar (X)', role:'Tech Member', bio:'built for speed , parked for snacks', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Tejas' },
       { name:'Anmol Vishwakarma (X)', role:'Tech Member', bio:'My downfall is better than your prime', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Anmol' },
@@ -511,4 +513,3 @@
   </script>
 </body>
 </html>
-
