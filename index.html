@@ -421,7 +421,7 @@
       { name:'Ayushmaan Singh (X)', role:'Tech Member', bio:'V8 go vroom vroom', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Ayushmaan' },
       { name:'Tejas Chahar (X)', role:'Tech Member', bio:'built for speed , parked for snacks', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Tejas' },
       { name:'Anmol Vishwakarma (X)', role:'Tech Member', bio:'My downfall is better than your prime', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Anmol' },
-      { name:'Vernica (XII)', role:'Event Head', bio:'high on octane low on caffeine', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Vernica' },
+      { name:'Vernica (XII)', role:'Event Head', bio:'high on octane low on caffeine', img:'https://i.ibb.co/d4FCfjmT/vern.jpg' },
       { name:'Chahat Negi (X)', role:'Event Team Member', bio:'Dream core soul with a reality check', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Chahat' },
       { name:'Kshrija Singh (IX)', role:'Event Team Member', bio:"What’s hard to reach is where I feel at home.", img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Kshrija' },
       { name:'Mishka Bansal (XII)', role:'Research Head', bio:'locked in', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Mishka' },
@@ -488,7 +488,7 @@
             <p class="text-brand-400 text-sm font-medium">${m.role}</p>
             ${m.bio ? `<p class='mt-1 text-white/70 text-sm italic'>“${m.bio}”</p>` : ''}
           </div>
-          ${(m.role.includes('President')||m.role.includes('Secretary')) ? `<span class="absolute top-3 left-3 text-[10px] tracking-wide bg-brand-600/90 px-2 py-1 rounded-full">CORE</span>` : ''}
+          ${(m.role.includes('President')||m.role.includes('Secretary')||m.role.includes('Event Head')||m.role.includes('Research Head')||m.role.includes('Tech Head')) ? `<span class="absolute top-3 left-3 text-[10px] tracking-wide bg-brand-600/90 px-2 py-1 rounded-full">CORE</span>` : ''}
         </div>`);
     }
 
@@ -510,4 +510,3 @@
   </script>
 </body>
 </html>
-
