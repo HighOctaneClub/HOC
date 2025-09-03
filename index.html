@@ -9,13 +9,12 @@
   <meta name="keywords" content="High Octane Club, HOC, DPS Dwarka, automobile club, motorsport, student club" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- OpenGraph / Social -->
+ 
   <meta property="og:title" content="High Octane Club — Official" />
   <meta property="og:description" content="Workshops, events, galleries and more. #REVVON" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.ibb.co/70mk5KJ/High-Octane-Club.png" />
 
-  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -61,13 +60,13 @@
     }
   </script>
 
-  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* Subtle film grain */
+    
     .noise {
       position: absolute; inset: -1px; pointer-events:none; opacity:.12; mix-blend-mode: soft-light;
       background-image: url('data:image/svg+xml;utf8,\
@@ -122,7 +121,7 @@
 
 <body class="bg-dark text-white font-body selection:bg-brand-600 selection:text-white">
   <div class="noise"></div>
-  <!-- Navbar -->
+ 
   <header x-data="{open:false}" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 backdrop-blur bg-black/60">
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3 group">
@@ -153,10 +152,10 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  
   <section id="home" class="relative pt-28">
   <div class="absolute inset-0 -z-10">
-    <!-- gradient beams -->
+ 
     <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-[38rem] w-[38rem] rounded-full bg-brand-700/30 blur-3xl"></div>
     <div class="absolute top-40 -left-32 h-72 w-72 rounded-full bg-brand-500/20 blur-2xl"></div>
   </div>
@@ -191,7 +190,7 @@
             type="video/mp4" />
         </video>
 
-        <!-- Responsive Instagram-style Countdown Overlay -->
+       
         <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm px-3">
           <p class="text-xs sm:text-sm md:text-lg text-white/80 tracking-wide uppercase mb-3 text-center">
             Annual Fest '25
@@ -258,7 +257,7 @@
 </script>
 
 
-  <!-- About / Pillars -->
+
   <section id="about" class="relative py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto">
@@ -287,7 +286,7 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+
   <section id="gallery" class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-6">
@@ -298,14 +297,14 @@
         <button id="openAllPhotos" class="hidden sm:inline-flex items-center rounded-xl border border-white/15 px-4 py-2 hover:border-brand-500/60">Open Lightbox</button>
       </div>
 
-      <!-- Masonry layout without JS (CSS columns) -->
+    
       <div class="mt-8 [column-fill:_balance] columns-1 sm:columns-2 lg:columns-3 gap-5" id="galleryGrid">
-        <!-- images injected by JS -->
+      
       </div>
     </div>
   </section>
 
-  <!-- Events -->
+
   <section id="events" class="py-24 border-y border-white/10 bg-white/5">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto">
@@ -313,12 +312,12 @@
         <p class="mt-3 text-white/75">Gear up for what's next.</p>
       </div>
       <div id="eventsWrap" class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- event cards via JS -->
+  
       </div>
     </div>
   </section>
 
-  <!-- Team -->
+
   <section id="team" class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto">
@@ -332,7 +331,6 @@
     </div>
   </section>
 
-  <!-- Join -->
   <section id="join" class="py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl border border-white/10 p-8 md:p-12 bg-gradient-to-br from-white/5 to-transparent shadow-glow grid md:grid-cols-2 gap-8 items-center">
@@ -345,7 +343,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+
   <section id="contact" class="py-24">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-display text-3xl sm:text-4xl font-bold">Contact Us</h2>
@@ -374,7 +372,7 @@
     </div>
   </footer>
 
-  <!-- Modals / Lightboxes -->
+
   <div id="lightbox" class="fixed inset-0 z-[60] hidden place-items-center bg-black/80 p-4">
     <button id="closeLightbox" class="absolute top-4 right-4 rounded-full bg-white/10 p-2 hover:bg-white/20" aria-label="Close lightbox">✕</button>
     <img id="lightboxImg" alt="Gallery image" class="max-h-[85vh] w-auto rounded-xl border border-white/10 shadow-2xl" />
@@ -390,12 +388,12 @@
     </div>
   </div>
 
-  <!-- Alpine.js for small interactivity -->
+  
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <!-- App Data + Logic -->
+  
   <script>
-    // ====== Content ======
+    
     const gallery = [
       {src:'https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/d07XKQ2F/DSC-2204.jpg', title:"Circuit Serenity '25"},
@@ -437,10 +435,10 @@
       { name:'Apoorva (XII)', role:'Member', bio:'', img:'https://placehold.co/400x400/FF0000/FFFFFF?text=Apoorva' },
     ];
 
-    // ====== Renderers ======
+    
     function el(html) { const t = document.createElement('template'); t.innerHTML = html.trim(); return t.content.firstChild; }
 
-    // Gallery
+   
     const grid = document.getElementById('galleryGrid');
     gallery.forEach(g => {
       const card = el(`
@@ -452,7 +450,7 @@
       grid.appendChild(card);
     });
 
-    // Events
+    
     const eventsWrap = document.getElementById('eventsWrap');
     events.forEach(e => {
       const card = el(`
@@ -474,11 +472,10 @@
       eventsWrap.appendChild(card);
     });
 
-    // Team (preview grid)
+    
     const teamGrid = document.getElementById('teamGrid');
     team.slice(0, 8).forEach(m => teamGrid.appendChild(teamCard(m)));
 
-    // Team modal (full)
     const teamModalGrid = document.getElementById('teamModalGrid');
     team.forEach(m => teamModalGrid.appendChild(teamCard(m)));
 
@@ -495,7 +492,7 @@
         </div>`);
     }
 
-    // ====== Lightbox ======
+   
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const openAllPhotos = document.getElementById('openAllPhotos');
@@ -505,7 +502,7 @@
     document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !lightbox.classList.contains('hidden')) { lightbox.classList.add('hidden'); document.body.style.overflow=''; }});
     openAllPhotos?.addEventListener('click', ()=> openLightbox(gallery[0].src));
 
-    // Team modal
+   
     const teamModal = document.getElementById('teamModal');
     document.getElementById('openTeam').onclick = () => { teamModal.classList.remove('hidden'); document.body.style.overflow='hidden'; };
     document.getElementById('closeTeam').onclick = () => { teamModal.classList.add('hidden'); document.body.style.overflow=''; };
