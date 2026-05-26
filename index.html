@@ -231,7 +231,7 @@
 <script>
   // Countdown Timer
   const countdown = document.getElementById("countdown");
-  const targetDate = new Date("Coming_Soon").getTime();
+  const targetDate = new Date("").getTime();
 
   setInterval(() => {
     const now = new Date().getTime();
@@ -239,9 +239,6 @@
 
     if (distance < 0) {
       countdown.innerHTML = "<span class='text-white text-base sm:text-xl font-bold'>It's Fest Day! 🎉</span>";
-      return;
-      if (distance = Coming_Soon) {
-         countdown.innerHTML = "<span class='text-white text-base sm:text-xl font-bold'>Coming Soon! 🎉</span>";
       return;
         
     }
