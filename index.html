@@ -133,6 +133,7 @@
         <a href="#gallery" class="hover:text-brand-400">Gallery</a>
         <a href="#events" class="hover:text-brand-400">Events</a>
         <a href="#team" class="hover:text-brand-400">Team</a>
+        <a href="#presidents" class="hover:text-brand-400">Our Presidents</a>
         <a href="#contact" class="hover:text-brand-400">Contact</a>
         <a href="#join" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 shadow-glow">Join</a>
       </div>
@@ -146,6 +147,7 @@
         <a @click="open=false" href="#gallery" class="py-2">Gallery</a>
         <a @click="open=false" href="#events" class="py-2">Events</a>
         <a @click="open=false" href="#team" class="py-2">Team</a>
+        <a @click="open=false" href="#presidents" class="py-2">Our Presidents</a>
         <a @click="open=false" href="#contact" class="py-2">Contact</a>
         <a @click="open=false" href="#join" class="py-2 inline-flex items-center justify-center rounded-lg bg-brand-600">Join</a>
       </div>
@@ -332,6 +334,21 @@
     </div>
   </section>
 
+  <section id="presidents" class="py-24 bg-white/5 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold">Our Presidents</h2>
+        <p class="mt-3 text-white/75">Leadership driving the club forward.</p>
+      </div>
+      
+      <div id="presidentsGrid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+      
+      <div class="mt-8 text-center">
+        <button id="openPresidents" class="inline-flex items-center rounded-xl px-5 py-3 border border-white/15 hover:border-brand-500/60">View All Presidents</button>
+      </div>
+    </div>
+  </section>
+
   <section id="join" class="py-24">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl border border-white/10 p-8 md:p-12 bg-gradient-to-br from-white/5 to-transparent shadow-glow grid md:grid-cols-2 gap-8 items-center">
@@ -451,6 +468,56 @@
       grid.appendChild(card);
     });
 
+    const presidents = [
+      { 
+        name: 'Arnav Saxena (XII)', 
+        role: 'President', 
+        bio: 'Where the road begins', 
+        img: 'https://i.ibb.co/yBRcwz34/Whats-App-Image-2025-09-02-at-20-01-00-d95b9ec3.jpg' 
+      },
+      { 
+        name: 'Ayush Kumar (XII)', 
+        role: 'President', 
+        bio: 'Simply Lovely', 
+        img: 'https://i.ibb.co/6cKqyXPx/Ayush.jpg' 
+      },
+    
+    ];
+
+    const presidentsGrid = document.getElementById('presidentsGrid');
+    presidents.slice(0, 8).forEach(m => presidentsGrid.appendChild(teamCard(m)));
+
+    const presidentsModal = document.createElement('div');
+    presidentsModal.id = 'presidentsModal';
+    presidentsModal.className = 'fixed inset-0 z-[60] hidden overflow-y-auto bg-black/80 p-6';
+    presidentsModal.innerHTML = `
+      <div class="mx-auto max-w-6xl">
+        <div class="relative rounded-2xl border border-white/10 bg-black/70 backdrop-blur p-6 md:p-8 shadow-glow">
+          <button id="closePresidents" class="absolute top-3 right-3 rounded-full bg-white/10 p-2 hover:bg-white/20">✕</button>
+          <h3 class="font-display text-2xl font-bold">All Presidents</h3>
+          <div id="presidentsModalGrid" class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(presidentsModal);
+
+    const presidentsModalGrid = document.getElementById('presidentsModalGrid');
+    presidents.forEach(m => presidentsModalGrid.appendChild(teamCard(m)));
+
+    document.getElementById('openPresidents').onclick = () => {
+      presidentsModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+    document.getElementById('closePresidents').onclick = () => {
+      presidentsModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    };
+    presidentsModal.addEventListener('click', (e) => {
+      if (e.target === presidentsModal) {
+        presidentsModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
     
     const eventsWrap = document.getElementById('eventsWrap');
     events.forEach(e => {
