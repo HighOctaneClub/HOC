@@ -290,16 +290,15 @@
   </section>
 
 
- <section id="gallery" class="py-24">
+<section id="gallery" class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-6">
         <div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold">Gallery</h2>
-         <p class="text-white/70 mt-2">A glimpse into the action, adrenaline, and achievements of HOC’s finest moments.</p>
+          <p class="text-white/70 mt-2">A glimpse into the action, adrenaline, and achievements of HOC’s finest moments.</p>
         </div>
-        <button id="openAllPhotos" class="hidden sm:inline-flex items-center rounded-xl border border-white/15 px-4 py-2 hover:border-brand-500/60">Open Lightbox</button>
       </div>
-      
+
       <div id="galleryFolders" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </div>
   </section>
@@ -415,17 +414,16 @@
   
   <script>
     
-    const gallery = [
+   const gallery = [
       {src:'https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/KjsnSXfy/IMG-8550.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/d07XKQ2F/DSC-2204.jpg', title:"Circuit Serenity '25"},
       {src:'https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg', title:"RPM Auction '24"},
       {src:'https://i.ibb.co/tTTvnwmq/build-a-beast.jpg', title:"Build-A-Beast '25"},
       {src:'https://i.ibb.co/sdVw61CH/Whats-App-Image-2025-08-06-at-14-55-54-a22cfed2.jpg', title:"Build-A-Beast '25"}
-    
     ];
 
-    
+    // Group photos by event title
     const grouped = gallery.reduce((acc, item) => {
       (acc[item.title] = acc[item.title] || []).push(item);
       return acc;
@@ -438,27 +436,25 @@
       folder.className = 'event-folder rounded-2xl border border-white/10 bg-black/40 overflow-hidden transition-all duration-300';
       folder.dataset.open = 'false';
 
-      
+      // Stacked preview thumbnails
       const previews = photos.slice(0, 3).map((p, i) => 
         `<img src="${p.src}" alt="" class="absolute w-16 h-12 object-cover rounded-md border-2 border-black shadow-md"
               style="transform: rotate(${(i-1)*6}deg) translateX(${i*10}px); z-index:${3-i}">`
       ).join('');
 
       folder.innerHTML = `
-        <div class="folder-header flex items-center gap-4 p-4 cursor-pointer hover:bg-white/5 transition" role="button">
-          <div class="relative w-24 h-14 flex-shrink-0">
-            ${previews}
-          </div>
+        <div class="folder-header flex items-center gap-4 p-4 cursor-pointer hover:bg-white/5 transition">
+          <div class="relative w-24 h-14 flex-shrink-0">${previews}</div>
           <div class="flex-1 min-w-0">
             <h3 class="font-display font-semibold text-lg truncate">${eventName}</h3>
             <p class="text-sm text-white/60">${photos.length} photo${photos.length > 1 ? 's' : ''}</p>
           </div>
           <span class="expand-icon text-2xl text-brand-400 transition-transform duration-300">+</span>
         </div>
-        <div class="folder-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+        <div class="folder-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
           <div class="photo-grid grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 pt-0">
             ${photos.map(p => `
-              <img src="${p.src}" alt="${eventName}" 
+              <img src="${p.src}" alt="${eventName}"
                    class="w-full h-28 object-cover rounded-lg cursor-pointer hover:opacity-90 hover:scale-[1.02] transition border border-white/10"
                    data-src="${p.src}">
             `).join('')}
@@ -466,14 +462,14 @@
         </div>
       `;
 
-      
+      // Toggle folder open/close
       const header = folder.querySelector('.folder-header');
       const content = folder.querySelector('.folder-content');
       const icon = folder.querySelector('.expand-icon');
 
       header.addEventListener('click', () => {
         const isOpen = folder.dataset.open === 'true';
-        folder.dataset.open = !isOpen;
+        folder.dataset.open = String(!isOpen);
 
         if (!isOpen) {
           content.style.maxHeight = content.scrollHeight + 'px';
@@ -486,7 +482,7 @@
         }
       });
 
-    
+      // Click photo → open lightbox
       folder.querySelectorAll('.photo-grid img').forEach(img => {
         img.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -497,7 +493,7 @@
       foldersContainer.appendChild(folder);
     });
 
-  
+    // ========== LIGHTBOX ==========
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
 
