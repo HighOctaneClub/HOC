@@ -195,7 +195,7 @@
        
         <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm px-3">
           <p class="text-xs sm:text-sm md:text-lg text-white/80 tracking-wide uppercase mb-3 text-center">
-            Annual Fest '27
+            Annual Fest '26
           </p>
           <div id="countdown" class="flex gap-2 sm:gap-3 w-full max-w-md justify-center flex-wrap"></div>
         </div>
@@ -290,15 +290,17 @@
   </section>
 
 
-<section id="gallery" class="py-24">
+  <section id="gallery" class="py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-6">
         <div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold">Gallery</h2>
           <p class="text-white/70 mt-2">A glimpse into the action, adrenaline, and achievements of HOC’s finest moments.</p>
         </div>
+        <button id="openAllPhotos" class="hidden sm:inline-flex items-center rounded-xl border border-white/15 px-4 py-2 hover:border-brand-500/60">Open Lightbox</button>
       </div>
 
+    
       <div class="mt-8 [column-fill:_balance] columns-1 sm:columns-2 lg:columns-3 gap-5" id="galleryGrid">
       
       </div>
@@ -410,16 +412,15 @@
   
   <script>
     
-   const gallery = [
+    const gallery = [
       {src:'https://i.ibb.co/20mYz5Rs/Whats-App-Image-2025-04-11-at-12-14-10-PM.jpg', title:"Workshop '25"},
-      {src:'https://i.ibb.co/KjsnSXfy/IMG-8550.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/d07XKQ2F/DSC-2204.jpg', title:"Circuit Serenity '25"},
+      {src:'https://i.ibb.co/KjsnSXfy/IMG-8550.jpg', title:"Workshop '25"},
       {src:'https://i.ibb.co/CKg8vMhD/IMG-20241001-WA0026.jpg', title:"RPM Auction '24"},
       {src:'https://i.ibb.co/tTTvnwmq/build-a-beast.jpg', title:"Build-A-Beast '25"},
       {src:'https://i.ibb.co/sdVw61CH/Whats-App-Image-2025-08-06-at-14-55-54-a22cfed2.jpg', title:"Build-A-Beast '25"}
     ];
 
-    });
     const events = [
       {name:'Drag Wars 🏁', blurb:'Ready, set, mod!', date:'TBD', location:'TBD', details:''},
     ];
