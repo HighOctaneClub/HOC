@@ -195,7 +195,7 @@
        
         <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm px-3">
           <p class="text-xs sm:text-sm md:text-lg text-white/80 tracking-wide uppercase mb-3 text-center">
-            Annual Fest '26
+            Annual Fest '27
           </p>
           <div id="countdown" class="flex gap-2 sm:gap-3 w-full max-w-md justify-center flex-wrap"></div>
         </div>
@@ -299,10 +299,6 @@
         </div>
       </div>
 
-      <div id="galleryFolders" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-  </section>
-    
       <div class="mt-8 [column-fill:_balance] columns-1 sm:columns-2 lg:columns-3 gap-5" id="galleryGrid">
       
       </div>
@@ -423,101 +419,6 @@
       {src:'https://i.ibb.co/sdVw61CH/Whats-App-Image-2025-08-06-at-14-55-54-a22cfed2.jpg', title:"Build-A-Beast '25"}
     ];
 
-    // Group photos by event title
-    const grouped = gallery.reduce((acc, item) => {
-      (acc[item.title] = acc[item.title] || []).push(item);
-      return acc;
-    }, {});
-
-    const foldersContainer = document.getElementById('galleryFolders');
-
-    Object.entries(grouped).forEach(([eventName, photos]) => {
-      const folder = document.createElement('div');
-      folder.className = 'event-folder rounded-2xl border border-white/10 bg-black/40 overflow-hidden transition-all duration-300';
-      folder.dataset.open = 'false';
-
-      // Stacked preview thumbnails
-      const previews = photos.slice(0, 3).map((p, i) => 
-        `<img src="${p.src}" alt="" class="absolute w-16 h-12 object-cover rounded-md border-2 border-black shadow-md"
-              style="transform: rotate(${(i-1)*6}deg) translateX(${i*10}px); z-index:${3-i}">`
-      ).join('');
-
-      folder.innerHTML = `
-        <div class="folder-header flex items-center gap-4 p-4 cursor-pointer hover:bg-white/5 transition">
-          <div class="relative w-24 h-14 flex-shrink-0">${previews}</div>
-          <div class="flex-1 min-w-0">
-            <h3 class="font-display font-semibold text-lg truncate">${eventName}</h3>
-            <p class="text-sm text-white/60">${photos.length} photo${photos.length > 1 ? 's' : ''}</p>
-          </div>
-          <span class="expand-icon text-2xl text-brand-400 transition-transform duration-300">+</span>
-        </div>
-        <div class="folder-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="photo-grid grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 pt-0">
-            ${photos.map(p => `
-              <img src="${p.src}" alt="${eventName}"
-                   class="w-full h-28 object-cover rounded-lg cursor-pointer hover:opacity-90 hover:scale-[1.02] transition border border-white/10"
-                   data-src="${p.src}">
-            `).join('')}
-          </div>
-        </div>
-      `;
-
-      // Toggle folder open/close
-      const header = folder.querySelector('.folder-header');
-      const content = folder.querySelector('.folder-content');
-      const icon = folder.querySelector('.expand-icon');
-
-      header.addEventListener('click', () => {
-        const isOpen = folder.dataset.open === 'true';
-        folder.dataset.open = String(!isOpen);
-
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          icon.style.transform = 'rotate(45deg)';
-          folder.classList.add('ring-1', 'ring-brand-500/40');
-        } else {
-          content.style.maxHeight = '0';
-          icon.style.transform = 'rotate(0deg)';
-          folder.classList.remove('ring-1', 'ring-brand-500/40');
-        }
-      });
-
-      // Click photo → open lightbox
-      folder.querySelectorAll('.photo-grid img').forEach(img => {
-        img.addEventListener('click', (e) => {
-          e.stopPropagation();
-          openLightbox(img.dataset.src);
-        });
-      });
-
-      foldersContainer.appendChild(folder);
-    });
-
-    // ========== LIGHTBOX ==========
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-
-    function openLightbox(src) {
-      lightboxImg.src = src;
-      lightbox.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    document.getElementById('closeLightbox').onclick = () => {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = '';
-    };
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
     });
     const events = [
       {name:'Drag Wars 🏁', blurb:'Ready, set, mod!', date:'TBD', location:'TBD', details:''},
